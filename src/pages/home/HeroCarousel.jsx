@@ -25,7 +25,7 @@ const HeroCarousel = () => {
   }, [current]);
 
   return (
-    <div className="relative w-full h-[600px] md:h-[700px] bg-[#0a0f1a] overflow-hidden flex items-center justify-center font-sans">
+    <div className="relative  w-full h-[700px] md:h-[700px] bg-[#0a0f1a] overflow-hidden flex items-center justify-center font-sans">
       
       {/* Blurred Background Image mimicking the cinematic bokeh */}
       <div 
