@@ -8,6 +8,7 @@ import IptvChannelsPage from "../pages/iptv-channels/Iptv-Channels-Page";
 import IptvApp from "../pages/iptv-app/Iptv-App";
 import FreeTrial from "../pages/free-trial/FreeTrial";
 import IptvBox from "../pages/iptv-box/Iptv-Box";
+import BlogLayout from "../pages/blogs/BlogLayout";
 
 export default function RouterPage() {
     // 1. Get the current route location
@@ -41,8 +42,9 @@ export default function RouterPage() {
                 <Route path="/buy-now" element={<BuyNowPage />} />
                 <Route path="/iptv-channels" element={<IptvChannelsPage />} />
                 <Route path="/iptv-app" element={<IptvApp />} />
-                <Route path="/free-trial" element={<FreeTrial/>}/>\
+                <Route path="/free-trial" element={<FreeTrial/>}/>
                 <Route path="/iptv-boxes" element={<IptvBox />} />
+                <Route path="/blogs" element={<BlogLayout />} />
             </Routes>
             
             <Footer />
