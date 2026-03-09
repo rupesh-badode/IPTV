@@ -30,7 +30,7 @@ const HeroCarousel = () => {
       {/* Blurred Background Image mimicking the cinematic bokeh */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center opacity-40 blur-md"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1574267432553-4b462808152f?q=80&w=2000&auto=format&fit=crop')" }}
+        style={{ backgroundImage: "url('https://1000logos.net/wp-content/uploads/2025/10/TV-Channels-and-Their-Logos.jpg')" }}
       />
 
       {/* Main Carousel Wrapper */}

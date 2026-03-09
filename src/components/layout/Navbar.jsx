@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, ChevronDown, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#', active: true },
-    { name: 'Buy Now', href: '#' },
-    { name: 'IPTV Channels', href: '#', hasDropdown: true },
-    { name: 'IPTV App', href: '#' },
-    { name: 'Free Trial', href: '#' },
-    { name: 'IPTV Boxes', href: '#' },
-    { name: 'Location', href: '#', hasDropdown: true },
-    { name: 'Blogs', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'Buy Now', href: '/buy-now' },
+    { name: 'IPTV Channels', href: '/iptv-channels', hasDropdown: true },
+    { name: 'IPTV App', href: '/iptv-app' },
+    { name: 'Free Trial', href: '/free-trial' },
+    { name: 'IPTV Boxes', href: '/iptv-boxes' },
+    { name: 'Location', href: '/location', hasDropdown: true },
+    { name: 'Blogs', href: '/blogs' },
   ];
 
   return (
@@ -33,8 +34,8 @@ const Navbar = () => {
       <ul className="hidden lg:flex items-center gap-6">
         {navLinks.map((link) => (
           <li key={link.name} className="relative group">
-            <a
-              href={link.href}
+            <Link
+              to={link.href}
               className={`flex items-center gap-1 text-[15px] font-bold transition-colors duration-300 ${
                 link.active ? 'text-[#4ba6e2]' : 'text-[#217bb4] hover:text-[#4ba6e2]'
               }`}
@@ -43,7 +44,7 @@ const Navbar = () => {
               {link.hasDropdown && (
                 <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
               )}
-            </a>
+            </Link>
             {/* Creative Hover Underline */}
             <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-[#ffb100] transition-all duration-300 group-hover:w-full" />
           </li>
@@ -83,13 +84,13 @@ const Navbar = () => {
             <ul className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-[#217bb4] font-bold text-lg block hover:text-[#ffb100]"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
